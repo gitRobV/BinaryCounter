@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1867D0551F16D79700297CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867D0541F16D79700297CA9 /* AppDelegate.swift */; };
-		1867D0571F16D79700297CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867D0561F16D79700297CA9 /* ViewController.swift */; };
+		1867D0571F16D79700297CA9 /* BinaryCounterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867D0561F16D79700297CA9 /* BinaryCounterTableViewController.swift */; };
 		1867D05A1F16D79700297CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1867D0581F16D79700297CA9 /* Main.storyboard */; };
 		1867D05D1F16D79700297CA9 /* BinaryCounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1867D05B1F16D79700297CA9 /* BinaryCounter.xcdatamodeld */; };
 		1867D05F1F16D79700297CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1867D05E1F16D79700297CA9 /* Assets.xcassets */; };
 		1867D0621F16D79700297CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1867D0601F16D79700297CA9 /* LaunchScreen.storyboard */; };
 		1867D06D1F16D79800297CA9 /* BinaryCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867D06C1F16D79800297CA9 /* BinaryCounterTests.swift */; };
 		1867D0781F16D79800297CA9 /* BinaryCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867D0771F16D79800297CA9 /* BinaryCounterUITests.swift */; };
+		1867D0861F16D9E700297CA9 /* BinaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867D0851F16D9E700297CA9 /* BinaryCell.swift */; };
+		18AA040A1F16E9400064E857 /* BinaryCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA04091F16E9400064E857 /* BinaryCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		1867D0511F16D79700297CA9 /* BinaryCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinaryCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1867D0541F16D79700297CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1867D0561F16D79700297CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1867D0561F16D79700297CA9 /* BinaryCounterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCounterTableViewController.swift; sourceTree = "<group>"; };
 		1867D0591F16D79700297CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1867D05C1F16D79700297CA9 /* BinaryCounter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BinaryCounter.xcdatamodel; sourceTree = "<group>"; };
 		1867D05E1F16D79700297CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		1867D0731F16D79800297CA9 /* BinaryCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinaryCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1867D0771F16D79800297CA9 /* BinaryCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCounterUITests.swift; sourceTree = "<group>"; };
 		1867D0791F16D79800297CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1867D0851F16D9E700297CA9 /* BinaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryCell.swift; sourceTree = "<group>"; };
+		18AA04091F16E9400064E857 /* BinaryCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				1867D0541F16D79700297CA9 /* AppDelegate.swift */,
-				1867D0561F16D79700297CA9 /* ViewController.swift */,
+				1867D0561F16D79700297CA9 /* BinaryCounterTableViewController.swift */,
+				1867D0851F16D9E700297CA9 /* BinaryCell.swift */,
+				18AA04091F16E9400064E857 /* BinaryCellDelegate.swift */,
 				1867D0581F16D79700297CA9 /* Main.storyboard */,
 				1867D05E1F16D79700297CA9 /* Assets.xcassets */,
 				1867D0601F16D79700297CA9 /* LaunchScreen.storyboard */,
@@ -265,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1867D0861F16D9E700297CA9 /* BinaryCell.swift in Sources */,
+				18AA040A1F16E9400064E857 /* BinaryCellDelegate.swift in Sources */,
 				1867D05D1F16D79700297CA9 /* BinaryCounter.xcdatamodeld in Sources */,
-				1867D0571F16D79700297CA9 /* ViewController.swift in Sources */,
+				1867D0571F16D79700297CA9 /* BinaryCounterTableViewController.swift in Sources */,
 				1867D0551F16D79700297CA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +528,7 @@
 				1867D07E1F16D79800297CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1867D07F1F16D79800297CA9 /* Build configuration list for PBXNativeTarget "BinaryCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +537,7 @@
 				1867D0811F16D79800297CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1867D0821F16D79800297CA9 /* Build configuration list for PBXNativeTarget "BinaryCounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +546,7 @@
 				1867D0841F16D79800297CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
